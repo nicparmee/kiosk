@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="1200dp"
-        android:layout_height="700dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/web1Btn"
+        android:layout_height="600dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="120dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,10 +20,15 @@
         android:id="@+id/web1Btn"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:text="Button"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/mainlogo"
+        android:scaleType="centerInside"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/videoView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -34,7 +38,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
-        android:text="Button"
+        android:src="@drawable/bglogo"
+        android:elevation="3dp"
+        android:scaleType="centerInside"
+        android:backgroundTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/videoView"
         app:layout_constraintTop_toBottomOf="@+id/web1Btn" />
@@ -46,42 +53,57 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
-        android:text="Button"
+        android:src="@drawable/mdslogo"
+        android:scaleType="centerInside"
+        android:elevation="3dp"
+        android:backgroundTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/videoView"
         app:layout_constraintTop_toBottomOf="@+id/web2Btn" />
 
-    <Button
+    <ImageButton
         android:id="@+id/vid1Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="801dp" />
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:src="@drawable/mowBtn"
+        android:scaleType="centerInside"
+        android:backgroundTint="#000"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/videoView"
+        app:layout_constraintTop_toBottomOf="@+id/videoView" />
 
-    <Button
+    <ImageButton
         android:id="@+id/vid2Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="293dp"
-        tools:layout_editor_absoluteY="788dp" />
+        android:src="@drawable/midBtn"
+        android:scaleType="centerInside"
+        android:backgroundTint="#000"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vid1Btn"
+        app:layout_constraintTop_toBottomOf="@+id/videoView" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
-        tools:layout_editor_absoluteX="677dp"
-        tools:layout_editor_absoluteY="810dp" />
+        tools:layout_editor_absoluteX="1390dp"
+        tools:layout_editor_absoluteY="801dp" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
-        tools:layout_editor_absoluteX="938dp"
-        tools:layout_editor_absoluteY="810dp" />
+        tools:layout_editor_absoluteX="1698dp"
+        tools:layout_editor_absoluteY="788dp" />
 
     <WebView
         android:id="@+id/web1"
@@ -91,5 +113,44 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp" />
 
+    <WebView
+        android:id="@+id/web2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="5dp"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <WebView
+        android:id="@+id/web3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:elevation="5dp"
+
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+
+    <Button
+        android:id="@+id/closeWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:text="Button"
+        android:elevation="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <app.num.numandroidpagecurleffect.PageCurlView
+        android:id="@+id/pagecurl_view"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:background="@drawable/bglogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
